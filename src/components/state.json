@@ -1,0 +1,176 @@
+{
+  "sheetsById": {
+    "Box animation": {
+      "staticOverrides": {
+        "byObject": {
+          "Box / Material": {
+            "Color": {
+              "r": 1,
+              "g": 0.050980392156862744,
+              "b": 0,
+              "a": 1
+            },
+            "Roughness": 0.7721518987341772,
+            "Metalness": 0.13291139240506306
+          },
+          "Box / Mesh": {
+            "Scale": {
+              "x": 21,
+              "y": 26,
+              "z": 33
+            },
+            "Rotation": {
+              "y": -27
+            }
+          }
+        }
+      },
+      "sequence": {
+        "subUnitsPerUnit": 30,
+        "length": 10,
+        "type": "PositionalSequence",
+        "tracksByObject": {
+          "Box / Material": {
+            "trackData": {
+              "_Cl1bf5lRu": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Box / Material:[\"Color\"]",
+                "keyframes": [
+                  {
+                    "id": "FFM7sR0fkb",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "value": {
+                      "r": 1,
+                      "g": 0.050980392156862744,
+                      "b": 0,
+                      "a": 1
+                    }
+                  },
+                  {
+                    "id": "y-GhZDI0jQ",
+                    "position": 1.033,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "value": {
+                      "r": 0.10980392156862745,
+                      "g": 1,
+                      "b": 0,
+                      "a": 1
+                    }
+                  },
+                  {
+                    "id": "3LYLWzzukv",
+                    "position": 2.2,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "value": {
+                      "r": 0,
+                      "g": 0.8196078431372549,
+                      "b": 1,
+                      "a": 1
+                    }
+                  },
+                  {
+                    "id": "-1Hj3XCB1g",
+                    "position": 3.467,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "value": {
+                      "r": 0.5294117647058824,
+                      "g": 0,
+                      "b": 1,
+                      "a": 1
+                    }
+                  },
+                  {
+                    "id": "1SBbpb8CA4",
+                    "position": 4.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "value": {
+                      "r": 1,
+                      "g": 0,
+                      "b": 0.6313725490196078,
+                      "a": 1
+                    }
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"Color\"]": "_Cl1bf5lRu"
+            }
+          },
+          "Box / Mesh": {
+            "trackData": {
+              "NHg01-St1u": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Box / Mesh:[\"Rotation\",\"y\"]",
+                "keyframes": [
+                  {
+                    "id": "HlIbG_TA-j",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.68,
+                      -0.55
+                    ],
+                    "value": -27
+                  },
+                  {
+                    "id": "pAdRSK9WrF",
+                    "position": 4.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.265,
+                      1.55,
+                      0.5,
+                      0
+                    ],
+                    "value": -239
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"Rotation\",\"y\"]": "NHg01-St1u"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitionVersion": "0.4.0",
+  "revisionHistory": [
+    "lGpfMIwXmYaeb8F0"
+  ]
+}
