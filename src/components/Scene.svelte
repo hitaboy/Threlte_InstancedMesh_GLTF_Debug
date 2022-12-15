@@ -4,7 +4,7 @@
     import { Project } from '@threlte/theatre'
     import { useGltf } from '@threlte/extras'
     import state from './state.json'
-    const { gltf } = useGltf('/models/Anim_Flagtail/Anim_Flagtail.gltf')
+    const { gltf } = useGltf('/models/Anim_Flagtail/Anim_Flagtail.glb')
     let geometry
     let material
     $: if ($gltf) {
@@ -33,7 +33,7 @@
 
     {#if geometry && material}
 
-       <InstancedMesh geometry={geometry.toNonIndexed()} material={material.clone()}>
+       <InstancedMesh geometry={geometry} material={material.clone()}>
             <Instance />
         </InstancedMesh>
 
