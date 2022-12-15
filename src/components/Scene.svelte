@@ -1,24 +1,13 @@
 <script>
-    import { InstancedMesh, Instance, OrbitControls, useFrame, T } from '@threlte/core'
-	import { BackSide, sRGBEncoding  } from 'three';
+    import { InstancedMesh, Instance, OrbitControls, T } from '@threlte/core'
+	import { BackSide, MeshStandardMaterial, SphereGeometry } from 'three';
     import { Project } from '@threlte/theatre'
-    import { useGltf } from '@threlte/extras'
+    import Flagtail from './Fishes/Flagtail.svelte';
     import state from './state.json'
-    const { gltf } = useGltf('/models/Anim_Flagtail/Anim_Flagtail.glb')
-    let geometry
-    let material
-    $: if ($gltf) {
-        /*
-        $gltf.materials['MI_Flagtail'].metalness = 0;
-        $gltf.materials['MI_Flagtail'].roughness = 0;
-        $gltf.materials['MI_Flagtail'].fog = false;
-        $gltf.materials['MI_Flagtail'].color = {r:1,g:1,b:1,isColor:true};
-        */
-        material = $gltf.materials['MI_Flagtail']
-        geometry = $gltf.nodes['SK_Flagtail_LOD11_(Copy)'].geometry
-    }
+    
+    const geometry = new SphereGeometry(4.5)
+    const material = new MeshStandardMaterial()
 
-    $: console.log(material, geometry)
     // Definim una animació de Theatre.js i l'arrenquem
     let sequence
     
@@ -31,21 +20,17 @@
 
     <T.AmbientLight intensity={1.0} />
 
-    {#if geometry && material}
-
-       <InstancedMesh geometry={geometry} material={material.clone()}>
-            <Instance />
+       <InstancedMesh>
+            <Instance position={{x:15,y:-10,z:-35}}>
+                <Flagtail />
+            </Instance>
+            <Instance position={{x:-15,y:-2,z:0}}>
+                <Flagtail />
+            </Instance>
         </InstancedMesh>
-
-    {/if}
 
     <T.Mesh>
         <T.SphereGeometry args={[55, 32, 16 ]}/>
-        <T.MeshStandardMaterial color="#ffffff" side={BackSide} metalness={0} />
-    </T.Mesh>
-
-    <T.Mesh>
-        <T.SphereGeometry args={[5, 32, 16 ]}/>
         <T.MeshStandardMaterial color="#ff0000" side={BackSide} metalness={0} />
     </T.Mesh>
 
